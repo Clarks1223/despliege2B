@@ -23,10 +23,10 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
   const [mensaje, setMensaje] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   useEffect(() => {
-    if(showNotification){
-        setTimeout(() => {
-            setShowNotification(false);
-        }, 2000)
+    if (showNotification) {
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 2000)
     }
   })
   const [form, setForm] = useState({
@@ -111,6 +111,14 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
           body: JSON.stringify(form),
           headers: { "Content-Type": "application/json" },
         });
+        setForm({
+          nombre: "",
+          sector: "",
+          salida: "",
+          llegada: "",
+          maquinista: "",
+          detalles: "",
+        });
         setMensaje(true);
         setEstado(true);
         setShowNotification(true);
@@ -118,7 +126,6 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
         setTimeout(() => {
           setMensaje(false);
           setEstado(false);
-          //setform({})
         }, 1000);
       }
     } catch (error) {
@@ -297,16 +304,17 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
           }}
         />
 
-        {isEditing && (
+        {isEditing && form.id && (
           <button
             type="button"
             className="bg-red-500 hover:bg-red-600 text-white uppercase font-bold rounded-lg py-2 px-4 mt-3"
             onClick={() => {
-              window.location.reload(); //Recargar pagina al dar clic
+              window.location.reload(); // Recargar página al dar clic solo si está en modo edición
             }}
           >
             Cancelar
           </button>
+
         )}
       </form>
     </Formik>

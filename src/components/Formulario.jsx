@@ -304,7 +304,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
           className="bg-sky-900 w-full p-3 
                       text-white uppercase font-bold rounded-lg 
                       hover:bg-red-900 cursor-pointer transition-all"
-          value={form.id ? "Actualizar ruta" : "Registrar ruta"}
+          value={form.id ? "Actualizar ruta" : "Registrar ruta"} 
           onClick={() => {
             setIsEditing(true);
           }}

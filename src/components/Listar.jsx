@@ -36,6 +36,7 @@ const Listar = ({ estado,setIdmetro}) => {
                 const nuevasRutas = rutas.filter(ruta => ruta.id !== id)
                 setRutas(nuevasRutas)
             }
+            
         }
         catch (error) {
             console.log(error);

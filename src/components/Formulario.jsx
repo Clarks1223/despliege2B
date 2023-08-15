@@ -162,6 +162,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="nombre"
@@ -187,6 +188,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="sector"
@@ -212,6 +214,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="salida"
@@ -237,6 +240,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="llegada"
@@ -262,6 +266,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="maquinista"
@@ -285,6 +290,7 @@ export const Formulario = ({ setEstado, idMetro, setIdMetro }) => {
             onChange={handleChange}
             pattern="^[A-Za-z]+$"
             title="Ingrese solo letras"
+            maxLength={20}
           />
           <ErrorMessage
             name="detalles"
